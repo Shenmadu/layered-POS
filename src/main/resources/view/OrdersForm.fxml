@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="563.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrdersFormController">
+   <children>
+      <JFXButton fx:id="goBackButton" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" onAction="#goBackButtonOnAction" prefHeight="35.0" prefWidth="55.0" text="Go Back">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXTreeTableView fx:id="tblOrder" layoutX="38.0" layoutY="61.0" prefHeight="215.0" prefWidth="713.0">
+         <columns>
+            <TreeTableColumn fx:id="colId" prefWidth="204.0" text="OrderID" />
+            <TreeTableColumn fx:id="colDate" prefWidth="294.0" text="Date" />
+            <TreeTableColumn fx:id="colcustId" prefWidth="214.0" text="CustomerID" />
+         </columns>
+      </JFXTreeTableView>
+      <JFXTreeTableView fx:id="tblOrderDetails" layoutX="38.0" layoutY="313.0" prefHeight="215.0" prefWidth="713.0">
+         <columns>
+            <TreeTableColumn fx:id="colOrderId" prefWidth="152.0" text="OrderID" />
+            <TreeTableColumn fx:id="colCode" prefWidth="177.0" text="ItemCode" />
+            <TreeTableColumn fx:id="colQty" prefWidth="187.0" text="QTY" />
+            <TreeTableColumn fx:id="colPrice" prefWidth="196.0" text="UnitPrice" />
+         </columns>
+      </JFXTreeTableView>
+      <JFXButton layoutX="679.0" layoutY="15.0" onAction="#refreshButtonOnAction" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: #e82256;" text="Refresh" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
